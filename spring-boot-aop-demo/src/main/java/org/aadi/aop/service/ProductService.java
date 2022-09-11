@@ -26,9 +26,13 @@ public class ProductService {
 	public List<Product> addProduct(List<Product> products) {
 		return repository.saveAll(products);
 	}
-
+	
 	public List<Product> findAllProducts() {
 		return repository.findAll();
+	}
+
+	public Product findProductById(int id) {	
+		return repository.findById(id).get();
 	}
 
 }
